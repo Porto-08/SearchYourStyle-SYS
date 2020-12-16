@@ -1,0 +1,119 @@
+@media (max-width:975px)
+{
+    #section_13 #card,
+    #section_13  #card:nth-of-type(1)
+    {
+        height:350px;
+        margin:0
+    }
+}
+@media (max-width: 768px) {
+
+    #content #areastart {
+        padding: 0
+    }
+    #content #areastart nav {
+        border-radius: 0px;
+    }
+    /*Footer - Inicio*/
+    #section_4 .box-menu ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    #section_4 .box-menu ul li {
+        padding: 0;
+        margin: 10px;
+        text-align: center
+    }
+    #section_4 .box-menu ul li:nth-of-type(1) {
+        margin: 10px;
+        text-align: center
+    }
+    #section_4 hr {
+        border: 0px
+    }
+    #section_4 .box-text {
+        padding: 10px;
+    }
+    #section_13
+    {
+        margin:300px 0 0 0 
+    }
+    
+    /*Footer - Fim*/
+    .recomendacao #container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0px 0px 0px 0px;
+        width: 100%
+    }
+    #carousel .row .col-md-5 {
+        margin: 10px 0px 10px 0px;
+        box-shadow: none;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 20px
+    }
+    #carousel .row .col-md-5::before {
+        content: '';
+        display: flex;
+        background: white;
+        position: absolute;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        width: 55px;
+        height: 35px;
+        z-index: 1;
+        transform: rotate(0deg);
+        margin-left: 0px;
+        margin-top: -92px;
+    }
+}
+
+@media (max-width: 576px) {
+    #content #areastart {
+        padding: 0;
+        margin: 0;
+    }
+    #content .nav ul li a {
+        font-size: 18px;
+        color: white
+    }
+    #section_1 {
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        padding: 10px
+    }
+    #section_3 {
+        display: flex;
+        flex-direction: column-reverse
+    }
+    #section_2 {
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0px 10px 0px;
+        margin: 0px
+    }
+    #section_2 .text-box,
+    #section_2 .img-box {
+        margin: 0px;
+        text-align: left;
+        padding: 0px;
+    }
+    #content #section_3 .box-info {
+        width: 100%;
+        font-size: 18px;
+        background: #3d5079;
+        border-radius: 10px
+    }
+    #content #section_3 .box-feedback {
+        border-radius: 0px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        margin: 10px 0px 10px 0px;
+    }
+
+}

@@ -1,0 +1,57 @@
+<head>
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/estilos.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/responsivo.css'>
+</head>
+
+<body id="body">
+    <div id="content">
+        {{>_userNavbar}}
+        <div id="areastart">
+            <nav class="navbar " id="navbar">
+                <ul class="navbar-nav logo">
+                    <li>
+                        <span class="slide">
+                            <a class="nav-link text-white animate-up">
+                                <img src="/Imagens/logo.png" width="76" alt="">
+                            </a>
+                        </span>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <span class="slide">
+                        <a onclick="openSlideMenu()" class="nav-link animate-up">
+                            <h2><i class="fas fa-align-right text-white"></i></h2>
+                        </a>
+                    </span>
+                </ul>
+            </nav>
+            <div class="container text-center ">
+                <strong class="">
+                    <h4 class="display-4">Veja nossos salões cadastrados: </h4>
+                    <p>Aqui você pode encontrar os melhores salões de São Paulo. Aproveite! </p>
+                </strong>
+            </div>
+            <section id="section_6">
+                <div class="area-box">
+                    {{#each hairdressers}}
+                    <div class="card-box mb-4">
+                        <a href="/user/hairdresserDetails/{{_id}}">
+                            <div class="title-box">
+                                <h5><strong>{{salonName}}</strong></h5>
+                            </div>
+                            <div class="box-info">
+                                <p>Proprietário(a): <strong>{{name}}</strong></p>
+                                <p>Especialidade: <strong>{{specialty}}</strong></p>
+                            </div>
+                    </div>
+                    </a>
+                    {{else}}
+                        <div>
+                            <strong><h4>Não há Salões cadastrados.</h4></strong>
+                        </div>
+                    {{/each}}
+                </div>
+            </section>
+        </div>
+        {{>_userFooter}}
+</body>

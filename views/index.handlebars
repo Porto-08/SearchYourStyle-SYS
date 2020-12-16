@@ -1,0 +1,259 @@
+<head>
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/estilo_cliente.css'>
+</head>
+
+<body>
+    <header>
+        {{>_navbar}}
+        {{>_msg}}
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-5 col-sm-12">
+                    <img class="img-mobile_web pt-3 d-flex" src="../Imagens/undraw_barber_3uel.svg" alt="">
+                </div>
+                <div class="col-md-7 col-sm-12">
+                    <h3 class="h3">
+                        Um mundo no seu bolso !
+                    </h3>
+                    <p class="p">
+                        Já pensou em ter os melhores salões de cabeleireiro, barbearias, etc. Tudo isso na palma da sua
+                        mão.
+                    </p>
+                    <a href="/main/search">
+                        <button type="button" class="button px-5 py-2 text-white">
+                            <i class="fas fa-search"></i>
+                            Salões
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+    <!--Um Pouco de Nós-->
+    <div class="container-fluid small-content xl bg-white text-dark">
+        <h2><i class="far fa-thumbs-up"></i></h2>
+        <h3 class="text-center pt-2">
+            Um pouquinho de nós para você
+        </h3>
+        <ul class="row">
+            <li class="media col-md-4 col-sm-12">
+                <i class="fas fa-map-marker-alt fa-3x align-self-center mr-3"></i>
+                <div class="media-body pt-3 ml-2">
+                    <p class="card-text">Uma busca de salões 24 horas por dia, 7 dias por semana.</p>
+                    <p class="card-text">Então o você esta esperando, para encontrar o salão ideal para você.</p>
+                </div>
+            </li>
+            <li class="media col-md-4 col-sm-12">
+                <i class="fas fa-comments fa-3x align-self-center mr-3"></i>
+                <div class="media-body pt-5 ml-1">
+                    <p class="card-text">Uma equipe empenhada em entregar o melhor conteudo.</p>
+                </div>
+            </li>
+            <li class="media col-md-4 col-sm-12">
+                <i class="fas fa-shield-alt fa-3x align-self-center mr-3"></i>
+                <div class="media-body pt-3 ml-2">
+                    <p class="card-text">Trabalhamos duro para criarmos uma plataformas segura para você, livre de
+                        vírus, entre outras coisas que podem comprometer você e/ou seus dados.
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Área de Eventos -->
+    <div class="area-event">
+        <div class="area-box">
+            <div class="box-text">
+                <h3>Mês das
+                    <strong>crianças.</strong>
+                </h3>
+                <p class="text-left">
+                    Com o mês das crianças chegando a nossa equipe resolveu separa alguns salões especialmente para o
+                    seu filho(a), porque não tem nada melhor do que ver seu filho (a) feliz e bonito (a). Mas se você
+                    não tem filho não se preocupe tambem temos salões para o seu sobrinho (a), neto (a), afilhado (a),
+                    irmâozinho (a) etc. Sério que você vai perder está oportunidade.
+                </p>
+                <button type="submit"><a href="main/search">Eu quero ver!</a></button>
+            </div>
+            <div class="line"></div>
+            <div class="box-img">
+                <img src="../Imagens/jonathan-weiss-arxAZJT5k2A-unsplash.jpg" alt="">
+                <span>Foto feita por <a
+                        href="https://unsplash.com/@jweiss?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jonathan
+                        Weiss;<br></a> Site <a
+                        href="https://unsplash.com/s/photos/children-haircut?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash.</a></span>
+            </div>
+        </div>
+        <div class="area-box">
+            <div class="box-text-2">
+                <p>Valido das 00h01 a partir do dia 1 de Outubro de 2020 até às 23h59 do dia 31 de Outubro de 2020,
+                    quaisquer dúvida entre em contato conosco.</p>
+                <p>Nós não somos responsaveis pelo valor dos preços de corte etc, os valores são de total
+                    responsabilidade do cabeleireiro, mais dúvidas veja nossos <a href="">Termos de serviços</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Cadastre-se - Inicio-->
+    <section class="section-3 " id="gift">
+        <h2><i class="fas fa-check"></i></h2>
+        <h3 class="text-center "><strong>Uma nova experiência !</strong></h3>
+        <p>Cadastra-se gratuitamente, não levará mais que alguns minutinhos</p>
+        <div class="area-box">
+            <div class="card-box">
+                <p class="icon"><i class="fas fa-unlock-alt one fa-2x"></i></p>
+                <div class="box-title">Sem Cadastro</div>
+                <div class="box-line"></div>
+                <div class="box-text">
+                    <p><i class="fas fa-check"></i> Conteudo gratuito.</p>
+                    <p class="disabled"><i class="fas fa-times"></i>Melhor suporte.</p>
+                    <p class="disabled"><i class="fas fa-times"></i>Layout simples e direto.</p>
+                </div>
+            </div>
+            <div class="card-box">
+                <p class="icon"><i class="fas fa-user-lock one fa-2x"></i></p>
+                <div class="box-title">Com Cadastro</div>
+                <div class="box-line"></div>
+                <div class="box-text">
+                    <p><i class="fas fa-check"></i> Conteudo gratuito.</p>
+                    <p><i class="fas fa-check"></i> Melhor suporte.</p>
+                    <p><i class="fas fa-check"></i> Layout simples e direto.</p>
+                </div>
+            </div>
+        </div>
+        <a class="nav-link" href="/main/typeRegister">
+            <button class="btn btn-outline-light">
+                Criar conta!
+            </button>
+        </a>
+        <p class="text-center">Ao se cadastrar você estará Sujeito a Termos e Condições.</p>
+    </section>
+    
+    <!--Faq-->
+    <div class="section-10 container-fluid bg-white">
+        <br>
+        <h3 class="text-center" id="FAQ">
+            Dúvidas Frequentes
+        </h3>
+        <div class="row pb-5 pt-4">
+            <div class="col-md-6">
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block " type="button" data-toggle="collapse"
+                                    data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    O que é a(o) SYS?
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                A SYS é uma projeto, desenvolvido pela SWD, que tem tem o intuito de buscar salões
+                                de cabeleireiro, falando de modo geral.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    A SYS é gratuito?
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Sim, ele é totalmente gratuito, não importando se voçê possui cadastro ou não, então
+                                o que voçê esta esperando para utilizar-lo.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block  collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Sou obrigado a me cadastrado?
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Não, nossa equipe entende que a vezes pode ser chato se cadastrar, por isso damos
+                                essa liberdade para voçê escolher.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block " type="button" data-toggle="collapse"
+                                    data-target="#collapseOnes" aria-expanded="false" aria-controls="collapseOne">
+                                    O que eu ganho ao me cadastrar?
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseOnes" class="collapse" aria-labelledby="headingOne"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Nós garatimos que ao cadastrar voçê terá uma experiência totalmente diferente, desde
+                                um layout completamente diferente a outros conteúdos.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block  collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseTwos" aria-expanded="false" aria-controls="collapseTwo">
+                                    Estou seguro neste site?
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwos" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Sabemos que um dos maiores medos das pessoas é o de ter seus dados expostos na
+                                internet, por isso a SYS conta com uma equipe, pequena, mas empenhada, que trabalha
+                                24 por dias 7 dias por semana, além disso a SYS segui rigidamente a LGPD (Lei Geral
+                                de Proteção de dados), sancionada no ano de 2018.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block  collapsed " type="button" data-toggle="collapse"
+                                    data-target="#collapseThrees" aria-expanded="false" aria-controls="collapseThree">
+                                    A SYS possui algum protocolos/termos de serviço?
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThrees" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Sim, ao cadastrar, você condorda com nosso termos de serviços, por isso recomendamos
+                                que você leia-o, atentamentem qualquer descoprimento de nossas regras, podem
+                                acarretar em banimento, por tempo indeterminado, de nossa plataforma.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{>_footer}}
+</body>

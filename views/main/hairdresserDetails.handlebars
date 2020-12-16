@@ -1,0 +1,144 @@
+<head>
+  <link rel='stylesheet' type='text/css' media='screen' href='/css/estilos.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='/css/responsivo.css'>
+</head>
+
+<body id="body">
+  <div id="content" style="background: linear-gradient(90deg,mediumslateblue, mediumorchid)">
+    <header class="details">
+      <div class="img">
+        <nav class="nav-top fixed-top">
+          <ul>
+            <li>
+              <img src="/Imagens/logo.png" width="76" alt="">
+            </li>
+            <li>
+              <a href="/" class="text-white"><i class="fas fa-home"></i></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="img-user">
+          {{#if hairdresser.img}}
+          <img src="{{hairdresser.img}}" alt="Imagem do usuário">
+          {{else}}
+          <img src="/Imagens/undraw_profile_pic_ic5t.svg" alt="Imagem do usuário">
+          {{/if}}
+          <span title="Avaliação"></span>
+          <h3>{{hairdresser.name}}</h3>
+        </div>
+      </div>
+      <div id="areastart" class="detalhes">
+        <nav class="navbar" id="navbar">
+          <h3>{{hairdresser.salonName}}</h3>
+          <ul>
+            <li>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section id="section_20">
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <strong>
+              <h6>Proprietário:</h6>
+            </strong>
+            <input type="text" class="form-control" value="{{hairdresser.name}}" disabled>
+          </div>
+          <div class="form-group col-md-3">
+            <strong>
+              <h6>Telefone - Celular:</h6>
+            </strong>
+            <input type="text" class="form-control" value="{{hairdresser.cellphone}}" disabled>
+          </div>
+          <div class="form-group col-md-3">
+            <strong>
+              <h6>Gênero:</h6>
+            </strong>
+            <input type="text" class="form-control" value="{{hairdresser.gender}}" disabled>
+          </div>
+          <div class="form-group col-md-3">
+            <strong>
+              <h6>Especialidade:</h6>
+            </strong>
+            <input type="text" class="form-control" value="{{hairdresser.specialty}}" disabled>
+          </div>
+          <div class="form-group col-md-3">
+            <strong>
+              <h6>Trabalha com agendamento:</h6>
+            </strong>
+            <input type="text" class="form-control" value="{{hairdresser.scheduling}}" disabled>
+          </div>
+          <div class="form-group col-md-3">
+            <strong>
+              <h6>Logradouro:</h6>
+            </strong>
+            <input type="text" class="form-control"
+              value="{{hairdresser.typeAdress}} {{hairdresser.adress}} {{hairdresser.number}}, {{hairdresser.neighborhood}}"
+              disabled>
+          </div>
+          <div class="form-group col-md-3">
+            <strong>
+              <h6>Complemento:</h6>
+            </strong>
+            <input type="text" class="form-control" value="{{hairdresser.complement}}" disabled>
+          </div>
+          <div class="form-group col-md-3">
+            <strong>
+              <h6>Telefone - Fixo:</h6>
+            </strong>
+            <input type="text" class="form-control" value="{{hairdresser.landline}}" disabled>
+          </div>
+          <div class="col-md-12">
+            <center><strong>
+                <h6>Serviços Oferecidos:</h6>
+              </strong></center>
+          </div>
+          <div class="form-group col-md-3">
+            <input type="text" class="form-control" value="{{hairdresser.categorie_1}}" disabled>
+          </div>
+          <div class="form-group col-md-3">
+            <input type="text" class="form-control" value="{{hairdresser.categorie_2}}" disabled>
+          </div>
+          <div class="form-group col-md-3">
+            <input type="text" class="form-control" value="{{hairdresser.categorie_3}}" disabled>
+          </div>
+          <div class="form-group col-md-3">
+            <input type="text" class="form-control" value="{{hairdresser.categorie_4}}" disabled>
+          </div>
+        </div>
+        <div class="area-contact">
+          <details>
+            <summary>Informações adicionais</summary>
+            <section>
+              <div>
+                <p>Email: <strong>{{hairdresser.email}}</strong> </p>
+              </div>
+              <div>
+                <p>CNPJ: <strong>{{hairdresser.cnpj}}</strong> </p>
+              </div>
+              <div>
+                <p>OBS: <strong>agendamentos são feitos diretamente com o proprietário, via celular, email
+                    etc..</strong> </p>
+              </div>
+            </section>
+          </details>
+        </div>
+        <h6 class="text-center">Horário de Atendimento</h6>
+        <div class="time-salon">
+          <p>{{hairdresser.openTime}}h - {{hairdresser.closeTime}}h</p>
+          <p>|</p>
+          <p>De {{hairdresser.weekOpen}} à {{hairdresser.weekClose}}</p>
+        </div>
+        <div class="time-salon">
+        </div>
+      </form>
+      <div class="box-button">
+        <a class="button-back" title="Voltar" href="/main/search">
+          <i class="fas fa-arrow-left"></i>
+        </a>
+      </div>
+    </section>
+  </div>
+</body>

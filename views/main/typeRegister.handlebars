@@ -1,0 +1,115 @@
+<head>
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/estilo.css'>
+</head>
+
+<body>
+    <div class="container-modal">
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+            role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h2 class="modal-title text-center text-dark" id="staticBackdropLabel">
+                            <img src="../Imagens/undraw_profile_pic_ic5t.svg" class="img-fluid">
+                        </h2>
+                        <form class="mt-3" action="/user/login" method="POST">
+                            <div class="form-group">
+                                <label for="email" class="label-input label">
+                                    <i class="far fa-envelope"></i>
+                                    <input type="email" name="email" placeholder="Email  Ex: nome@gmail.com "
+                                        class="form-control text-white">
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="label-input label">
+                                    <i class="fas fa-key"></i>
+                                    <input type="password" name="password" placeholder="Senha Ex: 2$9ocinco2"
+                                        class="form-control mr-1 text-white">
+                                </label>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="submit" class="btn mt-3">Entrar</button>
+                                <button type="reset" class="btn mt-3 ml-3" data-dismiss="modal"> Fechar</button>
+                            </div>
+                            <p class="mt-3 text-center mr-1 text-dark nav-link">
+                                <a class="text-primary" href="/user/register">Não possui cadastro? Cadastre-se</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-modal">
+        <div class="modal fade" id="staticBackdrop1" data-backdrop="static" data-keyboard="false" tabindex="-1"
+            role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h2 class="modal-title text-center text-dark" id="staticBackdropLabel">
+                            <img src="../Imagens/undraw_profile_pic_ic5t.svg" class="img-fluid">
+                        </h2>
+                        <form class="mt-3" action="/hairdresser/login" method="POST">
+                            <div class="form-group">
+                                <label for="email" class="label-input label">
+                                    <i class="far fa-envelope"></i>
+                                    <input type="email" name="email" placeholder="Email  Ex: nome@gmail.com "
+                                        class="form-control text-white">
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="label-input label">
+                                    <i class="fas fa-key"></i>
+                                    <input type="password" name="password" placeholder="Senha Ex: 2$9ocinco2"
+                                        class="form-control mr-1 text-white">
+                                </label>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="submit" class="btn mt-3">Entrar</button>
+                                <button type="reset" class="btn mt-3 ml-3" data-dismiss="modal"> Fechar</button>
+                            </div>
+                            <p class="mt-3 text-center mr-1 text-dark">
+                                <a class="text-primary" href="/hairdresser/register">Não possui cadastro? Cadastre-se</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<section class="section-1" id="section_1">
+    <div class="box-text">
+        <h5 class="text-center">Selecione uma das opções abaixo...</h5>
+    </div>
+    <div class="box-card">
+        <div class="card" style="width: 18rem;">
+            <p class="img-top"><i class="fas fa-search-location fa-2x"></i></p>
+            <div class="card-body">
+                <h5 class="card-text">Usuário Padrão</h5>
+                <p class="card-text">Comece a pesquisar agora os melhores salões, com as condições que você preferir.
+                </p>
+                <a class="btn" data-toggle="modal" data-target="#staticBackdrop">Selecionar</a>
+            </div>
+            <div class="card-bottom">
+                <h5>{{users.length}}</h5>
+                <p>Usuários</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <p class="img-top"><i class="fas fa-cut fa-2x"></i></p>
+            <div class="card-body">
+                <h5 class="card-text">Cabeleireiro</h5>
+                <p class="card-text">Cadastre seu salão e cresca junto com a gente.</p>
+                <a class="btn" data-toggle="modal" data-target="#staticBackdrop1">Selecionar</a>
+            </div>
+            <div class="card-bottom">
+                <h5>{{hairdressers.length}}</h5>
+                <p>Salões</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+</body>

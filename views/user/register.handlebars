@@ -1,0 +1,109 @@
+<head>
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/estilo.css'>
+</head>
+
+<body>
+    <div class="container-modal">
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+            role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h2 class="modal-title text-center text-dark" id="staticBackdropLabel">
+                            <img src="../Imagens/undraw_profile_pic_ic5t.svg" class="img-fluid">
+                        </h2>
+                        <form class="mt-3" action="/user/login" method="POST">
+                            <div class="form-group">
+                                <label for="email" class="label-input label">
+                                    <i class="far fa-envelope"></i>
+                                    <input type="email" name="email" placeholder="Email  Ex: nome@gmail.com "
+                                        class="form-control text-white">
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="label-input label">
+                                    <i class="fas fa-key"></i>
+                                    <input type="password" name="password" placeholder="Senha Ex: 2$9ocinco2"
+                                        class="form-control mr-1 text-white">
+                                </label>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="submit" class="btn mt-3">Entrar</button>
+                                <button type="reset" class="btn mt-3 ml-3" data-dismiss="modal"> Fechar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {{>_msg}}
+    <div class="container"> 
+        <div class="content first-content">
+            <div class="first-column">
+                <h2 class="title">Olá Novamente!</h2>
+                <p class="description">Mantenha-se conectado conosco.</p>
+                <p class="description">Não perca seus dados!</p>
+                <a>
+                    <button id="signin" class="btn" data-toggle="modal" data-target="#staticBackdrop">Login</button>
+                </a>
+                <p class="description">Ou entre sem cadastro!
+                    <a href="/">
+                        <button type="button" class="btn btn-mod">
+                            Seguir
+                        </button>
+                    </a>
+                </p>
+            </div>
+            <div class="second-column">
+                <h2 class="title">Criar conta</h2>
+                <form class="form" name="form" action="/user/register" method="POST">
+                    <label class="label-input" for="">
+                        <i class="far fa-user icon"></i>
+                        <input type="text" name="name" class="UpWord" placeholder="Nome">
+                    </label>
+                    {{#each err_name}}
+                    <div class="h6 mt-2 ml-1 text-danger">
+                        {{text}}
+                    </div>
+                    {{else}}
+                    {{/each}}
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon"></i>
+                        <input type="email" name="email" placeholder="Email">
+                    </label>
+                    {{#each err_email}}
+                    <div class="h6 mt-2 ml-1 text-danger">
+                        {{text}}
+                    </div>
+                    {{else}}
+                    {{/each}}
+                    <label class="label-input">
+                        <i class="fas fa-lock icon text-white"></i>
+                        <input type="password" name="password" placeholder="Senha">
+                        <i onclick="password()" id="img"></i>
+                    </label>
+                    {{#each err_password}}
+                    <div class="h6 mt-2 ml-1 text-danger">
+                        {{text}}
+                    </div>
+                    {{else}}
+                    {{/each}}
+                    <label class="label-input">
+                        <i class="fas fa-lock icon"></i>
+                        <input type="password" name="password_2" id="confpassword" placeholder="Confirmar Senha">
+                        <i onclick="confpassword()" id="img_2"></i>
+                    </label>
+                    {{#each err}}
+                    <div class="h6 mt-2 ml-1 text-danger">
+                        {{text}}
+                    </div>
+                    {{else}}
+                    {{/each}}
+                    <button type="submit" class="btn">Entrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

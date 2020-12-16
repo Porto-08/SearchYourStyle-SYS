@@ -1,0 +1,182 @@
+<head>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/estilos.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/responsivo.css'>
+</head>
+
+
+<body id="body" style="">
+    <div id="content">
+        {{>_userNavbar}}
+        <div id="areastart">
+            <nav class="navbar " id="navbar">
+                <ul class="navbar-nav logo">
+                    <li>
+                        <span class="slide">
+                            <a class="nav-link text-white animate-up">
+                                <img src="/Imagens/logo.png" width="76" alt="">
+                            </a>
+                        </span>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <span class="slide">
+                        <a onclick="openSlideMenu()" class="nav-link animate-up">
+                            <h2><i class="fas fa-align-right text-white"></i></h2>
+                        </a>
+                    </span>
+                </ul>
+            </nav>
+            <div class="arear-markenting">
+                <div class="box-text">
+                    <h4>
+                        <strong class="animate-up">Aqui você</strong>
+                        <br />
+                        <span></span>
+                        <br />
+                        <strong class="animate-up">num passe de mágica <i class="fas fa-hat-wizard"></i></strong>
+                    </h4>
+                    <p class="animate-up">"O mais importante é ser feliz consigo mesmo."</p>
+                </div>
+                <div class="box-img">
+                    <img src="../Imagens/undraw_barber_3uel.svg" class="animate-up">
+                </div>
+            </div>
+        </div>
+        </header>
+        <div class="container-fluid" id="carousel">
+            <h3 class="text-right ml-2">Recomendados</h3>
+            <div class="row">
+                <div class="col-md-7" id="carousel-1">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../Imagens/barbershop-1612726_640.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none
+                                        d-md-block">
+                                    <h5 class="text-center">"Nome do Salão"</h5>
+                                    <p class="text-center">"Alguma frase do cabeleireiro"</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../Imagens/klara-kulikova-wtt7u8t4pZw-unsplash.jpg" class="d-block w-100"
+                                    alt="...">
+                                <div class="carousel-caption d-none
+                                        d-md-block">
+                                    <h5 class="text-center">"Nome do Salão"</h5>
+                                    <p class="text-center">"Alguma frase do cabeleireiro"</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../Imagens/zaur-giyasov-nN0IdHumdck-unsplash.jpg" class="d-block w-100"
+                                    alt="...">
+                                <div class="carousel-caption d-none
+                                        d-md-block">
+                                    <h5 class="text-center">"Nome do Salão"</h5>
+                                    <p class="text-center">"Alguma frase do cabeleireiro"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <p>Olá eu sou a SYS<strong> (Search Your Style)</strong>, gostariamos de agradecer por ter se
+                        cadastrado, então nós separamos, carinhosamente, alguns salões que nós achamos serem diferentes
+                        (de uma maneira boa). Então aproveite.
+                    </p>
+                    <p class="text-muted text-center">Ass.: <strong>Search
+                            Your Style</strong></p>
+                </div>
+            </div>
+        </div>
+        <section id="section_2" class="mt-4">
+            <div class="card-main">
+                <div class="text-box">
+                    <h2 class="text-center">Mobile !</h2>
+                    <p>Talvez você não saiba, mas nossa equipe esta desenvolvendo um app especialmente para você,
+                        então já pensou em ter milhares de salões de cabeleireiros, barbearias etc, tudo isso no seu
+                        bolso, nós sabemos que pode parecer loucura, mas
+                        é verdade, se você não acredita, pode ir acreditando porque em breve lhe daremos mais
+                        informações sobre o desenvolvimento do nosso app.</p>
+                </div>
+                <div class="img-box">
+                    <img src="../Imagens/undraw_mobile_ux_o0e1.svg" alt="">
+                    <div class="shadow"></div>
+                </div>
+            </div>
+            <div class="footer">
+                <p class="text-center">
+                    <a href="" class="mr-5">
+                        <i class="fab fa-android fa-2x icon-android"></i>
+                    </a>
+
+                    <a href="">
+                        <i class="fab fa-apple fa-2x icon-apple"></i>
+                    </a>
+                </p>
+                <h5 class="text-center">Disponivel em ambos os sistemas!</h5>
+            </div>
+        </section>
+        <main>
+            <div class="area-event" id="events">
+                <div class="area-box">
+                    <div class="box-text">
+                        <h3>Mês das
+                            <strong>crianças.</strong>
+                        </h3>
+                        <p class="text-left">
+                            Com o mês das crianças chegando a nossa equipe resolveu separa alguns salões especialmente
+                            para o seu filho(a), porque não tem nada melhor do que ver seu filho (a) feliz e bonito (a).
+                            Mas se você não tem filho não se preocupe tambem temos salões para o seu sobrinho (a), neto
+                            (a), afilhado (a), irmâozinho (a) etc. Sério que você vai perder está oportunidade.
+                        </p>
+                        <button type="submit"><a href="/user/search">Eu quero ver!</a></button>
+                    </div>
+                    <div class="line"></div>
+                    <div class="box-img">
+                        <img src="../Imagens/jonathan-weiss-arxAZJT5k2A-unsplash.jpg" alt="">
+                        <span>Foto feita por <a
+                                href="https://unsplash.com/@jweiss?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jonathan
+                                Weiss;<br></a> Site <a
+                                href="https://unsplash.com/s/photos/children-haircut?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash.</a></span>
+                    </div>
+                </div>
+                <div class="area-box">
+                    <div class="box-text-2">
+                        <p>Valido das 00h01 a partir do dia 1 de Outubro de 2020 até às 23h59 do dia 31 de Outubro de
+                            2020, quaisquer dúvida entre em contato conosco.</p>
+                        <p>Nós não somos responsaveis pelo valor dos preços de corte etc, os valores são de total
+                            responsabilidade do cabeleireiro, mais dúvidas veja nossos <a href="">Termos de
+                                serviços</a>.</p>
+                    </div>
+                </div>
+            </div>
+            <section id="section_18">
+                <h2><i class="fas fa-users"></i></h2>
+                <h3>Veja nossos apoiadores !</h3>
+                <p>Fique de olho em alguns de nosso apoiadores.</p>
+                <div class="area-box">
+                    {{#each companys}}
+                    <div class="box-card">
+                        <a href="">
+                            <div class="img-box">
+                                <img src="{{img}}" alt="">
+                            </div>
+                            <div class="box-title">
+                                <h5><strong><a href="../html/detalhes_salao.html">{{company}}</a></strong></h5>
+                            </div>
+                        </a>
+                    </div>
+                    {{else}}
+                    <h3 class="mb-4">Sem Indicações no momento</h3>
+                    {{/each}}
+                </div>
+            </section>
+        </main>
+        {{>_userFooter}}
+    </div>
+</body>

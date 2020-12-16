@@ -1,0 +1,87 @@
+<head>
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/estilo_cliente.css'>
+</head>
+
+<body>
+    <header>
+        {{>_navbar}}
+        <div class="container adventure">
+            <div class="row">
+                <div class="col-md-5">
+                    <h3>
+                        Antes de qualquer coisa,<strong>olá e seja bem vindo(a)</strong>. A tela que voçê esta vendo é a
+                        mais importante do site, voçê esta dúvidando? Não duvide, pois é aqui que toda
+                        <strong>magia</strong> acontece.
+                    </h3>
+                    <p class="text-center">Ps.:voçê ainda esta duvidando, né? Então veja.
+                    </p>
+                </div>
+                <div class="col-md-7">
+                    <h4 class="text-center"><span></span></h4>
+                    <p class="text-center">
+                        Cadastre-se e tenha acesso a diversos conteúdos.
+                    </p>
+                    <ul>
+                        <li>
+                            <p class="text-center">
+                                <a href="/main/typeRegister">
+                                    <button class="btn text-center button-2">
+                                        Cadastrar-me
+                                    </button>
+                                </a>
+                            </p>
+                        </li>
+                        <li class="mr-1">
+                            <p class="text-center">
+                                <a href="/#gift">
+                                    <button class="btn text-center button-2">
+                                        O você ganha?
+                                    </button>
+                                </a>
+                            </p>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid result mt-3">
+        <h3 class="text-center">
+            Salões cadastrados:
+            <i class="far fa-folder-open"></i>
+        </h3>
+        <div class="row pb-2 pt-3">
+            {{#each hairdressers}}
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <div>
+                                <div>
+                                    <h4>{{salonName}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <div>
+                                    <strong><p>Proprietário: {{name}}</p></strong>
+                                    <strong><p>Gênero: {{gender}}</p></strong>
+                                    <strong><p>Especialidade: {{specialty}}</p></strong>
+                                    <a href="/main/hairdresserDetails/{{_id}}"><button class="btn btn-outline-secondary">Ver Mais</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{else}}
+                <div class="container text-center">
+                    <h4>
+                        Sem salões cadastrados
+                    </h4>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+    {{>_footer}}
+</body>

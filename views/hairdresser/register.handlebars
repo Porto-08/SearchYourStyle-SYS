@@ -1,0 +1,244 @@
+<head>
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/estilos.css'>
+</head>
+
+<body>
+    <div class="container" id="cadastro">
+        {{>_msg}}
+        {{#each err}}
+        <div class="alert alert-danger">
+            {{text}}
+        </div>
+        {{else}}
+        {{/each}}
+        {{#each muitosErros}}
+        <div class="alert alert-danger">
+            {{text}}
+        </div>
+        {{else}}
+        {{/each}}
+        <div class="content">
+            <div class="text-box">
+                <h4 class="text-left">
+                    <strong>BEM VINDO (A)</strong>
+                </h4>
+                <div class="hr"></div>
+                <br>
+                <p class="text-center">Para realizar seu cadastro, preencha os dados abaixo de acordo com os respectivos
+                    exemplos.
+                </p>
+            </div>
+            <div class="box-img">
+                <img src="../Imagens/form.svg">
+                <div class="img"></div>
+            </div>
+        </div>
+        <form method="POST" action="/hairdresser/register">
+            <h4 class="text-left mt-4 mb-3">
+                Dados Pessoais
+                <i class="far fa-user"></i>
+            </h4>
+            <hr>
+            <div class="form-row mt-4">
+                <div class="form-group col-md-4">
+                    <label for="email" class="h6">Email:</label>
+                    <input type="text" class="form-control" id="email" maxlength="50" name="email"
+                        placeholder="Exemplo: email@email.com">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="password" class="h6">Senha:</label>
+                    <input type="password" maxlength="20" class="form-control" id="password" name="password"
+                        placeholder="Exemplo: 2$9ocinco2">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="password_2" class="h6">Repetir Senha:</label>
+                    <input type="password" maxlength="20" class="form-control" id="password_2" name="password_2"
+                        placeholder="Exemplo: 2$9ocinco2">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="name" class="h6">Nome:</label>
+                    <input type="text" class="form-control UpWord" maxlength="20" id="name" name="name"
+                        placeholder="Exemplo: Mário" data-js="names">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="gender" class="h6">Sexo:</label>
+                    <select id="gender" name="gender" class="form-control">
+                        <option selected disabled>Selecione</option>
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                    </select>
+                </div>
+
+                <div class="col-md-4 form-group">
+                    <label for="cellphone" class="h6">Telefone - Celular:</label>
+                    <input type="text" class="form-control" id="cellphone" name="cellphone" autocomplete="off"
+                        data-js="cellphone" placeholder="Exemplo: (xx) xxxxx-xxxx">
+                </div>
+            </div>
+            <h4 class="text-left mt-4 mb-3">
+                Dados do Salão
+                <i class="fas fa-house-user"></i>
+            </h4>
+            <hr>
+            <div class="form-row">
+                <div class="col-md-4 form-group">
+                    <label for="salonName" class="h6">Nome do salão:</label>
+                    <input type="text" class="form-control UpWord" id="salonName" name="salonName"
+                        placeholder="Exemplo: Salão do Mário" data-js="names">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="specialty" class="h6">Especialidade:</label>
+                    <select id="specialty" name="specialty" class="form-control">
+                        <option selected disabled value="">Selecione a sua Especialidade</option>
+                        {{#each categories}}
+                        <option>{{name}}</option>
+                        {{else}}
+                        <option>Sem categoria</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="col-md-4 form-group">
+                    <label for="landline" class="h6">*Telefone - Fixo (Opcional):</label>
+                    <input type="text" class="form-control" id="landline" name="landline" autocomplete="off"
+                        data-js="landline" placeholder="Exemplo: (xx) xxxx-xxxx">
+                </div>
+                <div class="col-md-4 form-group">
+                    <label for="cnpj" class="h6">CNPJ:</label>
+                    <input type="text" class="form-control" id="cnpj" name="cnpj" autocomplete="off" data-js="cnpj"
+                        placeholder="Exemplo: xx.xxx.xxx/xxxx-xx">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="neighborhood" class="h6">Bairro:</label>
+                    <select id="neighborhood" name="neighborhood" class="form-control">
+                        <option selected disabled>Selecione um Bairro</option>
+                        {{#each neighborhoods}}
+                        <option>{{name}}</option>
+                        {{else}}
+                        <option>Selecione o Bairro</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="typeAdress" class="h6">Tipo do Logradouro:</label>
+                    <select id="typeAdress" name="typeAdress" class="form-control">
+                        <option selected disabled>Selecione</option>
+                        <option>Rua</option>
+                        <option>Avenida</option>
+                    </select>
+                </div>
+                <div class="col-md-4 form-group">
+                    <label for="adress" class="h6">Logradouro:</label>
+                    <input type="text" class="form-control UpWord" id="adress" name="adress" placeholder="Higienópolis"
+                        data-js="names">
+                </div>
+                <div class="col-md-4 form-group">
+                    <Label for="number" class="h6">Nº:</Label>
+                    <input type="text" class="form-control" id="number" name="number" placeholder="Exemplo: 1234"
+                        data-js="number">
+                </div>
+                <div class="col-md-4 form-group">
+                    <Label for="complement" class="h6">*Complemento (Opcional):</Label>
+                    <input type="text" class="form-control UpWord" id="complement" name="complement"
+                        placeholder="Exemplo: aprt. 153, Casa 2">
+                </div>
+                <div class="col-md-3">
+                    <label for="openTime" class="h6">Horário (Abertura):</label>
+                    <input type="text" name="openTime" id="openTime" class="form-control" placeholder="10:00"
+                        data-js="openTime">
+                    <span class="tooltiptext"></span>
+                </div>
+                <div class="col-md-3">
+                    <label for="closeTime" class="h6">Horário (Fechamento):</label>
+                    <input type="text" name="closeTime" id="closeTime" class="form-control" placeholder="18:00"
+                        data-js="closeTime">
+                </div>
+                <div class="col-md-3">
+                    <label for="weekOpen" class="h6">De:</label>
+                    <select name="weekOpen" id="weekOpen" class="form-control">
+                        <option selected disabled value="">Selecione o dia da Semana</option>
+                        <option>Segunda</option>
+                        <option>Terça</option>
+                        <option>Quarta</option>
+                        <option>Quinta</option>
+                        <option>Sexta</option>
+                        <option>Sábado</option>
+                        <option>Domingo</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="weekClose" class="h6">Até:</label>
+                    <select name="weekClose" id="weekClose" class="form-control">
+                        <option selected disabled value="">Selecione o dia da Semana</option>
+                        <option>Segunda</option>
+                        <option>Terça</option>
+                        <option>Quarta</option>
+                        <option>Quinta</option>
+                        <option>Sexta</option>
+                        <option>Sábado</option>
+                        <option>Domingo</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4 mt-3">
+                    <label class="h6">Trabalha com Agendamento:</label>
+                    <select name="scheduling" id="scheduling" class="form-control">
+                        <option selected disabled>Selecione uma opção:</option>
+                        <option>Sim</option>
+                        <option>Não</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-8 mt-3">
+                    <label class="h6">*Cole a URL da imagem de perfil (Opcional):</label>
+                    <input type="text" class="form-control" id="img" name="img">
+                </div>
+                <div class="col-md-12">
+                    <label for="categories" class="h6">Categorias com que você trabalha:</label>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <select name="categorie_1" id="categorie_1" class="form-control">
+                                <option selected disabled value="">Selecione a Categoria</option>
+                                {{#each categories}}
+                                <option>{{name}}</option>
+                                {{else}}
+                                <option>Sem categoria</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <select name="categorie_2" id="categorie_2" class="form-control">
+                                <option selected disabled value="">Selecione a Categoria</option>
+                                {{#each categories}}
+                                <option>{{name}}</option>
+                                {{else}}
+                                <option>Sem categoria</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <select name="categorie_3" id="categorie_3" class="form-control">
+                                <option selected disabled value="">Selecione a Categoria</option>
+                                {{#each categories}}
+                                <option>{{name}}</option>
+                                {{else}}
+                                <option>Sem categoria</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <select name="categorie_4" id="categorie_4" class="form-control">
+                                <option selected disabled value="">Selecione a Categoria</option>
+                                {{#each categories}}
+                                <option>{{name}}</option>
+                                {{else}}
+                                <option>Sem categoria</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn mb-3 mt-5 btn-submit">
+                <a>Pronto</a>
+            </button>
+        </form>
+    </div>
+</body>
